@@ -25,6 +25,7 @@ body {
 
 header {
     min-width: 360px;
+    max-width: 100%;
     margin-bottom: 30px;
     background-color: $darkBlue;
     color: #FFFFFF;
@@ -66,7 +67,7 @@ header {
 
 #Frontpage-picture {
     width: 100%;
-    height: auto;
+    
 }
 
 .Challenges-btn {
@@ -203,9 +204,11 @@ header {
         margin: 80px 80px 80px 80px;
     }
 }
-
+//########################################################
 .Book-on-site {
+
     min-width: 360px;
+    max-width: 100%;
 
     #Book-on-site-pic {
         width: 100%;
@@ -344,7 +347,31 @@ footer {
     }
 
     #Frontpage-picture {
+        grid-column: span 12;
+        max-width: 100%;
+        max-height:500px;
+        height:auto;
+        width: auto;
         
+        
+    }
+    .Story-preview {
+        grid-column: span 12;
+    }
+
+    .Book-on-site {
+        display:flex;
+        flex-direction: row;
+        grid-column: span 12;
+
+        #Book-on-site-pic {
+            grid-column: 1/6;
+        }
+        .Bos-text {
+            grid-column: 7/9;
+            justify-content: center;
+            align-self: center;
+        }
     }
 
 }

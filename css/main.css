@@ -20,6 +20,7 @@ body {
 
 header {
   min-width: 360px;
+  max-width: 100%;
   margin-bottom: 30px;
   background-color: #011827;
   color: #FFFFFF;
@@ -55,7 +56,6 @@ header .Hamburger-menu {
 
 #Frontpage-picture {
   width: 100%;
-  height: auto;
 }
 
 .Challenges-btn {
@@ -178,6 +178,7 @@ header .Hamburger-menu {
 
 .Book-on-site {
   min-width: 360px;
+  max-width: 100%;
 }
 .Book-on-site #Book-on-site-pic {
   width: 100%;
@@ -292,5 +293,28 @@ footer a {
   }
   #Review-card-holder {
     overflow: visible;
+  }
+  #Frontpage-picture {
+    grid-column: span 12;
+    max-width: 100%;
+    max-height: 500px;
+    height: auto;
+    width: auto;
+  }
+  .Story-preview {
+    grid-column: span 12;
+  }
+  .Book-on-site {
+    display: flex;
+    flex-direction: row;
+    grid-column: span 12;
+  }
+  .Book-on-site #Book-on-site-pic {
+    grid-column: 1/6;
+  }
+  .Book-on-site .Bos-text {
+    grid-column: 7/9;
+    justify-content: center;
+    align-self: center;
   }
 }/*# sourceMappingURL=main.css.map */
