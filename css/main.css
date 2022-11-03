@@ -13,14 +13,14 @@ body {
 
 .main {
   display: grid;
-  grid-template-columns: [left-start right-start] 1fr [left-end right-end];
+  grid-template-columns: 1fr;
   align-items: center;
   justify-content: center;
 }
 
 header {
   min-width: 360px;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
   background-color: #011827;
   color: #FFFFFF;
 }
@@ -43,8 +43,7 @@ header .Icon-and-title .Header-title {
   font-size: 24px;
   line-height: 28px;
 }
-header .Navbar > ul,
-header ul > li > a {
+header .Navbar > ul {
   display: none;
 }
 header .Hamburger-menu {
@@ -271,7 +270,30 @@ footer a {
   .main {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    align-items: center;
+    /* align-items: center;
+    justify-content: center; */
+  }
+  .Navbar .Hamburger-menu {
+    display: none;
+  }
+  .Navbar ul {
+    display: flex !important;
     justify-content: center;
+    justify-content: space-around;
+    list-style: none;
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  .Navbar ul a {
+    color: #FFFFFF;
+  }
+  #Escaperooms-available {
+    overflow: visible;
+  }
+  #Review-card-holder {
+    overflow: visible;
+  }
+  #Frontpage-picture {
+    grid-column: span 12;
   }
 }/*# sourceMappingURL=main.css.map */

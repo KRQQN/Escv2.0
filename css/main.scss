@@ -18,14 +18,14 @@ body {
 
 .main {
     display: grid;
-    grid-template-columns: [left-start right-start] 1fr [left-end right-end];
+    grid-template-columns: 1fr;
     align-items: center;
     justify-content: center;
 }
 
 header {
     min-width: 360px;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
     background-color: $darkBlue;
     color: #FFFFFF;
 
@@ -52,8 +52,7 @@ header {
         }
     }
 
-    .Navbar>ul,
-    ul>li>a {
+    .Navbar > ul {
         display: none;
     }
 
@@ -312,7 +311,40 @@ footer {
     .main {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        align-items: center;
-        justify-content: center;
+        
+    
+        /* align-items: center;
+        justify-content: center; */
     }
-  }
+
+    .Navbar {
+        .Hamburger-menu {
+            display: none;
+        }
+        ul {
+            //display: contents !important;
+            display: flex !important;
+            justify-content: center;
+            justify-content: space-around;
+            list-style: none;
+            color: #FFFFFF;
+            text-decoration: none;
+            a {
+                color: #FFFFFF;
+            }
+        }
+    }
+    
+    #Escaperooms-available {
+        overflow: visible;
+    }
+    
+    #Review-card-holder {
+        overflow: visible;
+    }
+
+    #Frontpage-picture {
+        grid-column: span 12;
+    }
+
+}
