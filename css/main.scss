@@ -3,6 +3,7 @@ $background-color: #E5E5E5;
 $darkBlue: #011827;
 $orangeIsh: #E3170A;
 
+
 * {
     padding: 0;
     margin: 0;
@@ -71,6 +72,20 @@ header {
     width: 100%;
     
 }
+//*****************************************
+section[name="Frontpage-picture-and-buttons"] {
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    
+    
+    
+}
+.Btn-holder {
+    display:flex;
+    flex-direction: column;
+
+}
 
 .Challenges-btn {
     margin: auto;
@@ -82,10 +97,8 @@ header {
     text-align: center;
     border-radius: 4px;
     border: none;
-    margin-top: 30px;
-    margin-bottom: 30px;
     height: 66px;
-    min-width: 306px; // j i c
+    min-width: 306px; 
 }
 
 .Online-challenges-btn {
@@ -94,6 +107,7 @@ header {
     background: none;
     margin-bottom: 67px;
 }
+
 
 #Review-card-holder {
     width: 100%;
@@ -315,8 +329,61 @@ footer {
 @media only screen and (min-width: 850px) {
     .main {
         
+        section[name="Frontpage-picture-and-buttons"] {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            
+            
+            
+            
+            #Frontpage-picture {
+                width: 100%;
+                max-height: 468px;
+                object-fit:cover;
+                
+            }
+           
+             .Challenges-btn {
+                margin: 0;
+                
+            }
+
+            .Btn-holder {
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 50px;
+                transform: translateY(-35px);
+            }
+             
+        }   
+
+        .Btn-holder {
+            display: flex;
+            flex-direction: row;
+            margin: 30px 30px;
+            //questionable solution
+        }
+
+        .Online-challenges-btn {
+                
+            margin: 0;
+            background-color: $orangeIsh;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            text-align: center;
+            border-radius: 4px;
+            border: none;
+            height: 66px;
+            min-width: 306px; 
         
+            a {
+                color: #FFFFFF;
+                text-decoration: none;
+            }
         
+        }
     }
 
     .Navbar {
@@ -346,15 +413,19 @@ footer {
         overflow: visible;
     }
 
-    #Frontpage-picture {
-        
-        width: 100%;
-        max-height: 468px;
-        object-fit:cover;
-        
-        
-    }
+    
     .Story-preview {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 33px;
+            text-align: center;
+            max-width: 630px;
+        }
         
     }
 
@@ -364,39 +435,37 @@ footer {
         
 
         #Book-on-site-pic {
-            
+            flex-basis: 1;
+            object-fit: cover;
+            padding:0;
         }
         .Bos-text {
-            
+            max-width: 50%;
+            flex-basis: 1;
             justify-content: center;
             align-self: center;
         }
     }
+    .See-challenges {
+        display:flex;
+        flex-direction: row;
 
-    .Challenges-btn {
-        margin: 0;
-        
-    }
-    
-    .Online-challenges-btn {
-        
-        margin: 0;
-        background-color: $orangeIsh;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 24px;
-        text-align: center;
-        border-radius: 4px;
-        border: none;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        height: 66px;
-        min-width: 306px; // j i c
-    
-        a {
-            color: #FFFFFF;
-            text-decoration: none;
+        #See-challenges-pic {
+            order: 1;
+            flex-basis: 1;
+            object-fit: cover;
+            padding:0;
+
         }
-    
+        .See-challenges-text {
+            
+            max-width: 50%;
+            flex-basis: 1;
+            justify-content: center;
+            align-self: center;
+            
+        }
     }
+
+    
 }
