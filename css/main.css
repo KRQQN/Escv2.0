@@ -12,8 +12,8 @@ body {
 }
 
 .main {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -21,7 +21,7 @@ body {
 header {
   min-width: 360px;
   max-width: 100%;
-  margin-bottom: 30px;
+  padding-bottom: 20px;
   background-color: #011827;
   color: #FFFFFF;
 }
@@ -50,11 +50,14 @@ header .Navbar > ul {
 header .Hamburger-menu {
   max-width: 50px;
   position: absolute;
-  left: 80%;
+  right: 10px;
   top: 10px;
+  padding: 10px;
 }
 
 #Frontpage-picture {
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
 }
 
@@ -82,7 +85,7 @@ header .Hamburger-menu {
 }
 
 #Review-card-holder {
-  min-width: 360px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   overflow: scroll;
@@ -119,9 +122,8 @@ header .Hamburger-menu {
 }
 
 #Escaperooms-available {
-  min-width: 360px;
+  width: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   overflow: scroll;
 }
@@ -157,7 +159,7 @@ header .Hamburger-menu {
 .Story-preview {
   display: flex;
   flex-direction: column;
-  min-width: 360px;
+  width: 100%;
   background-color: #011827;
   color: #FFFFFF;
 }
@@ -268,16 +270,11 @@ footer a {
 }
 
 @media only screen and (min-width: 850px) {
-  .main {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    /* align-items: center;
-    justify-content: center; */
-  }
   .Navbar .Hamburger-menu {
     display: none;
   }
   .Navbar ul {
+    padding-top: 25px;
     display: flex !important;
     justify-content: center;
     justify-content: space-around;
@@ -287,6 +284,7 @@ footer a {
   }
   .Navbar ul a {
     color: #FFFFFF;
+    text-decoration: none;
   }
   #Escaperooms-available {
     overflow: visible;
@@ -295,26 +293,38 @@ footer a {
     overflow: visible;
   }
   #Frontpage-picture {
-    grid-column: span 12;
-    max-width: 100%;
-    max-height: 500px;
-    height: auto;
-    width: auto;
-  }
-  .Story-preview {
-    grid-column: span 12;
+    width: 100%;
+    max-height: 468px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .Book-on-site {
     display: flex;
     flex-direction: row;
-    grid-column: span 12;
-  }
-  .Book-on-site #Book-on-site-pic {
-    grid-column: 1/6;
   }
   .Book-on-site .Bos-text {
-    grid-column: 7/9;
     justify-content: center;
     align-self: center;
+  }
+  .Challenges-btn {
+    margin: 0;
+  }
+  .Online-challenges-btn {
+    margin: 0;
+    background-color: #E3170A;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 4px;
+    border: none;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 66px;
+    min-width: 306px;
+  }
+  .Online-challenges-btn a {
+    color: #FFFFFF;
+    text-decoration: none;
   }
 }/*# sourceMappingURL=main.css.map */
