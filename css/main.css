@@ -70,6 +70,7 @@ section[name=Frontpage-picture-and-buttons] {
 .Btn-holder {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
 .Challenges-btn {
@@ -80,6 +81,7 @@ section[name=Frontpage-picture-and-buttons] {
   font-size: 24px;
   line-height: 28px;
   margin-top: 20px;
+  margin-bottom: 20px;
   text-align: center;
   border-radius: 4px;
   border: none;
@@ -143,7 +145,8 @@ section[name=Frontpage-picture-and-buttons] {
   height: auto;
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-  margin-left: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
   margin-bottom: 15px;
 }
 #Escaperooms-available .Escape-rooms-booking .Booking-picture {
@@ -271,13 +274,18 @@ section[name=Frontpage-picture-and-buttons] {
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
   background-color: #011827;
+  padding: 20px 20px;
   color: #FFFFFF;
 }
-footer .Footer-list-titles {
+footer h4 {
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 footer a {
   text-decoration: none;
@@ -285,6 +293,12 @@ footer a {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
+}
+footer .Footer-list ul {
+  list-style: none;
+}
+footer .Footer-list ul li :hover {
+  color: lightblue;
 }
 
 @media only screen and (min-width: 850px) {
@@ -378,7 +392,6 @@ footer a {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
     margin: 0px;
   }
   .Book-on-site #Book-on-site-pic {
@@ -421,7 +434,18 @@ footer a {
   }
   footer {
     width: 100%;
+    height: 467px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0;
+  }
+  footer h4 {
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  footer #Esc-room-description {
+    max-width: 420px;
   }
 }/*# sourceMappingURL=main.css.map */
