@@ -360,9 +360,13 @@ footer {
                 margin-bottom: 50px;
                 transform: translateY(-60px);
             }
-
+            
         }
-
+        #Review-card-holder {
+            justify-content: center;
+            align-self: center;
+        }
+    }
         .Btn-holder {
             display: flex;
             flex-direction: row;
@@ -455,7 +459,7 @@ footer {
 
             #Book-on-site-pic {
 
-
+                max-width: calc(50%);
                 padding: 0;
             }
 
@@ -482,7 +486,7 @@ footer {
 
 
             #See-challenges-pic {
-                order: 1;
+                
                 padding: 0;
 
             }
@@ -490,7 +494,6 @@ footer {
             .See-challenges-text {
 
                 max-width: 50%;
-                flex-basis: 1;
                 justify-content: center;
                 align-self: center;
 
@@ -515,6 +518,6 @@ footer {
             display:grid;
             grid-template-rows: 1fr 1fr;
         } */
-    }
+    
 
 }
