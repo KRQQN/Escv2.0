@@ -42,7 +42,6 @@ header {
             width: 128px;
             height: 82px;
             align-self: center;
-
         }
 
         .Header-title {
@@ -70,23 +69,18 @@ header {
 #Frontpage-picture {
     object-fit: cover;
     width: 100%;
-
 }
 
-//*****************************************
+
 section[name="Frontpage-picture-and-buttons"] {
     width: 100%;
     display: flex;
     flex-direction: column;
-
-
-
 }
 
 .Btn-holder {
     display: flex;
     flex-direction: column;
-
 }
 
 .Challenges-btn {
@@ -96,7 +90,6 @@ section[name="Frontpage-picture-and-buttons"] {
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
-    //edit här
     margin-top: 20px;
     text-align: center;
     border-radius: 4px;
@@ -120,7 +113,6 @@ section[name="Frontpage-picture-and-buttons"] {
     overflow: scroll;
     margin-bottom: 30px;
 
-
     .Review-card {
         display: flex;
         background-color: $background-color;
@@ -143,7 +135,6 @@ section[name="Frontpage-picture-and-buttons"] {
 
         q {
             align-self: flex-start;
-
         }
 
         small {
@@ -157,11 +148,9 @@ section[name="Frontpage-picture-and-buttons"] {
     margin-bottom: 45px;
 }
 
-
 #Escaperooms-available {
     width: 100%;
     display: flex;
-
     justify-content: space-between;
     overflow: scroll;
 
@@ -174,7 +163,6 @@ section[name="Frontpage-picture-and-buttons"] {
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
         margin-left: 30px;
         margin-bottom: 15px;
-
 
         .Booking-picture {
             border-radius: 8px 8px 0px 0px;
@@ -203,7 +191,6 @@ section[name="Frontpage-picture-and-buttons"] {
 .Story-preview {
     display: flex;
     flex-direction: column;
-
     width: 100%;
     background-color: $darkBlue;
     color: #FFFFFF;
@@ -225,11 +212,11 @@ section[name="Frontpage-picture-and-buttons"] {
     }
 }
 
-//########################################################
-.Book-on-site {
 
+.Book-on-site {
     min-width: 360px;
     max-width: 100%;
+    margin-bottom: 20px;
 
     #Book-on-site-pic {
         width: 100%;
@@ -274,6 +261,9 @@ section[name="Frontpage-picture-and-buttons"] {
 }
 
 .See-challenges {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
     min-width: 360px;
     margin-bottom: 20px;
 
@@ -282,34 +272,40 @@ section[name="Frontpage-picture-and-buttons"] {
         padding-bottom: 30px;
     }
 
-    h2 {
-        font-style: normal;
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 38px;
+    .See-challenges-text {
+        padding-left: 20px;
+        padding-right: 20px;
 
+        h2 {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 38px;
+
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 24px;
+            margin-bottom: 20px;
+            line-height: 28px;
+        }
+
+        button {
+            align-self: flex-start;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            text-align: center;
+            background-color: red;
+            border-radius: 4px;
+            border: none;
+            color: #ffffff;
+            min-width: 308px;
+            height: 66px;
+        }
     }
 
-    p {
-        font-weight: 400;
-        font-size: 24px;
-        margin-bottom: 20px;
-        line-height: 28px;
-    }
-
-    button {
-        align-self: flex-start;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 28px;
-        text-align: center;
-        background-color: red;
-        border-radius: 4px;
-        border: none;
-        color: #ffffff;
-        min-width: 308px;
-        height: 66px;
-    }
 }
 
 footer {
@@ -333,14 +329,12 @@ footer {
 
 @media only screen and (min-width: 850px) {
     .main {
+        //deal with it x) .main kan anses totalt onödig i guess.
 
         section[name="Frontpage-picture-and-buttons"] {
             width: 100%;
             display: flex;
             align-items: center;
-
-
-
 
             #Frontpage-picture {
                 width: 100%;
@@ -360,147 +354,111 @@ footer {
                 margin-bottom: 50px;
                 transform: translateY(-60px);
             }
-            
+
         }
+
         #Review-card-holder {
             justify-content: center;
             align-self: center;
         }
     }
-        .Btn-holder {
-            display: flex;
-            flex-direction: row;
-            margin: 30px 30px;
-            //questionable solution
+
+    .Btn-holder {
+        display: flex;
+        flex-direction: row;
+        margin: 30px 30px;
+        //questionable solution
+    }
+
+    .Online-challenges-btn {
+        margin: 0;
+        background-color: $orangeIsh;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        text-align: center;
+        border-radius: 4px;
+        border: none;
+        height: 66px;
+        min-width: 306px;
+
+        a {
+            color: #FFFFFF;
+            text-decoration: none;
         }
 
-        .Online-challenges-btn {
+    }
 
-            margin: 0;
-            background-color: $orangeIsh;
-            font-style: normal;
-            font-weight: 700;
-            font-size: 24px;
-            text-align: center;
-            border-radius: 4px;
-            border: none;
-            height: 66px;
-            min-width: 306px;
+    .Challenges-btn {
+        margin: 0;
+
+    }
+
+    .Navbar {
+        .Hamburger-menu {
+            display: none;
+        }
+
+        ul {
+            padding-top: 25px;
+            display: flex !important;
+            justify-content: center;
+            justify-content: space-around;
+            list-style: none;
+            color: #FFFFFF;
+            text-decoration: none;
 
             a {
                 color: #FFFFFF;
                 text-decoration: none;
             }
 
-        }
-
-        .Challenges-btn {
-            margin: 0;
-
-        }
-
-
-        .Navbar {
-            .Hamburger-menu {
-                display: none;
-            }
-
-            ul {
-                padding-top: 25px;
-                display: flex !important;
-                justify-content: center;
-                justify-content: space-around;
-                list-style: none;
-                color: #FFFFFF;
-                text-decoration: none;
-
-                a {
-                    color: #FFFFFF;
-                    text-decoration: none;
-                }
-
-                li>a:hover {
-                    color: $lightBlue;
-                }
+            li>a:hover {
+                color: $lightBlue;
             }
         }
+    }
 
-        #Escaperooms-available {
-            overflow: visible;
+    #Escaperooms-available {
+        overflow: visible;
+    }
+
+    #Review-card-holder {
+        overflow: visible;
+    }
+
+    .Story-preview {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 33px;
+            text-align: center;
+            max-width: 630px;
         }
 
-        #Review-card-holder {
-            overflow: visible;
+    }
+
+    .Book-on-site {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 0px;
+
+        #Book-on-site-pic {
+            min-width: 50%;
+            max-width: 50%;
+            padding: 0;
         }
 
-
-        .Story-preview {
-            display: flex;
-            align-items: center;
+        .Bos-text {
+            padding: 0;
             justify-content: center;
-
-            p {
-                font-style: normal;
-                font-weight: 400;
-                font-size: 28px;
-                line-height: 33px;
-                text-align: center;
-                max-width: 630px;
-            }
-
-        }
-
-        .Book-on-site {
-
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            
-
-
-
-            #Book-on-site-pic {
-                min-width: 50%;
-                max-width: 50%;
-                padding: 0;
-            }
-
-            .Bos-text {
-                padding: 0;
-                justify-content: center;
-                
-
-                h2,
-                p,
-                button {
-                    margin-left: 50px;
-                    margin-right: 50px;
-                }
-            }
-        }
-
-        .See-challenges {
-            width: 100%;
-            display: flex;
-            flex-direction: row-reverse;
-            margin:0;
-            
-            
-
-
-            #See-challenges-pic {
-                object-fit: cover;
-                min-width: 50%;
-                max-width: 50%;
-                padding: 0;
-
-            }
-
-            .See-challenges-text {
-                justify-content: center;
-                align-self: center;
-            }
 
             h2,
             p,
@@ -509,18 +467,41 @@ footer {
                 margin-right: 50px;
             }
         }
+    }
 
+    .See-challenges {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        margin-bottom: 100px;
 
-        footer {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
+        #See-challenges-pic {
+            object-fit: cover;
+            min-width: 50%;
+            max-width: 50%;
+            padding: 0;
         }
 
-        /* .Picture-content-and-options {
-            display:grid;
-            grid-template-rows: 1fr 1fr;
-        } */
-    
+        .See-challenges-text {
+            justify-content: center;
+            align-self: center;
+        }
+
+        h2,
+        p,
+        button {
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+    }
+
+    footer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
 
 }
