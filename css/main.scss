@@ -451,20 +451,22 @@ footer {
         }
 
         .Book-on-site {
+
+            width: 100%;
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
+            
 
 
 
             #Book-on-site-pic {
-
-                max-width: calc(50%);
+                min-width: 50%;
+                max-width: 50%;
                 padding: 0;
             }
 
             .Bos-text {
-                max-width: 50%;
                 padding: 0;
                 justify-content: center;
                 text-align: center;
@@ -482,18 +484,21 @@ footer {
             width: 100%;
             display: flex;
             flex-direction: row-reverse;
-            justify-content: space-evenly;
+            
+            
 
 
             #See-challenges-pic {
-                
+                object-fit: cover;
+                min-width: 50%;
+                max-width: 50%;
                 padding: 0;
 
             }
 
             .See-challenges-text {
 
-                max-width: 50%;
+                
                 justify-content: center;
                 align-self: center;
 
