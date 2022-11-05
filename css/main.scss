@@ -71,7 +71,6 @@ header {
     width: 100%;
 }
 
-
 section[name="Frontpage-picture-and-buttons"] {
     width: 100%;
     display: flex;
@@ -156,7 +155,6 @@ section[name="Frontpage-picture-and-buttons"] {
     justify-content: space-between;
     overflow: scroll;
     
-
     .Escape-rooms-booking {
         justify-content: space-between;
         width: 100%;
@@ -214,7 +212,6 @@ section[name="Frontpage-picture-and-buttons"] {
         margin: 80px 80px 80px 80px;
     }
 }
-
 
 .Book-on-site {
     min-width: 360px;
@@ -306,7 +303,6 @@ section[name="Frontpage-picture-and-buttons"] {
             height: 66px;
         }
     }
-
 }
 
 footer {
@@ -331,6 +327,7 @@ footer {
         font-size: 18px;
         line-height: 21px;
     }
+
     .Footer-list {
 
         ul {
@@ -359,7 +356,6 @@ footer {
 
             .Challenges-btn {
                 margin: 0;
-
             }
 
             .Btn-holder {
