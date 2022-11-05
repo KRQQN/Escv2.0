@@ -79,6 +79,7 @@ section[name=Frontpage-picture-and-buttons] {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  margin-top: 20px;
   text-align: center;
   border-radius: 4px;
   border: none;
@@ -279,6 +280,12 @@ footer a {
 }
 
 @media only screen and (min-width: 850px) {
+  .main {
+    /* .Picture-content-and-options {
+        display:grid;
+        grid-template-rows: 1fr 1fr;
+    } */
+  }
   .main section[name=Frontpage-picture-and-buttons] {
     width: 100%;
     display: flex;
@@ -297,7 +304,7 @@ footer a {
     display: flex;
     flex-direction: row;
     margin-bottom: 50px;
-    transform: translateY(-35px);
+    transform: translateY(-60px);
   }
   .main .Btn-holder {
     display: flex;
@@ -320,10 +327,13 @@ footer a {
     color: #FFFFFF;
     text-decoration: none;
   }
-  .Navbar .Hamburger-menu {
+  .main .Challenges-btn {
+    margin: 0;
+  }
+  .main .Navbar .Hamburger-menu {
     display: none;
   }
-  .Navbar ul {
+  .main .Navbar ul {
     padding-top: 25px;
     display: flex !important;
     justify-content: center;
@@ -332,22 +342,25 @@ footer a {
     color: #FFFFFF;
     text-decoration: none;
   }
-  .Navbar ul a {
+  .main .Navbar ul a {
     color: #FFFFFF;
     text-decoration: none;
   }
-  #Escaperooms-available {
+  .main .Navbar ul li > a:hover {
+    color: #8ACFE5;
+  }
+  .main #Escaperooms-available {
     overflow: visible;
   }
-  #Review-card-holder {
+  .main #Review-card-holder {
     overflow: visible;
   }
-  .Story-preview {
+  .main .Story-preview {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .Story-preview p {
+  .main .Story-preview p {
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
@@ -355,37 +368,51 @@ footer a {
     text-align: center;
     max-width: 630px;
   }
-  .Book-on-site {
+  .main .Book-on-site {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
   }
-  .Book-on-site #Book-on-site-pic {
-    flex-basis: 1;
-    -o-object-fit: cover;
-       object-fit: cover;
+  .main .Book-on-site #Book-on-site-pic {
     padding: 0;
   }
-  .Book-on-site .Bos-text {
+  .main .Book-on-site .Bos-text {
     max-width: 50%;
-    flex-basis: 1;
+    padding: 0;
     justify-content: center;
-    align-self: center;
+    text-align: center;
   }
-  .See-challenges {
+  .main .Book-on-site .Bos-text h2,
+.main .Book-on-site .Bos-text p,
+.main .Book-on-site .Bos-text button {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .main .See-challenges {
+    width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
   }
-  .See-challenges #See-challenges-pic {
+  .main .See-challenges #See-challenges-pic {
     order: 1;
-    flex-basis: 1;
-    -o-object-fit: cover;
-       object-fit: cover;
     padding: 0;
   }
-  .See-challenges .See-challenges-text {
+  .main .See-challenges .See-challenges-text {
     max-width: 50%;
     flex-basis: 1;
     justify-content: center;
     align-self: center;
+  }
+  .main .See-challenges h2,
+.main .See-challenges p,
+.main .See-challenges button {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .main footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
   }
 }/*# sourceMappingURL=main.css.map */
