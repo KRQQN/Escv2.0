@@ -22,6 +22,7 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 @mixin burger-line {
     background-color: #fff;
     border-radius:0.25em;
@@ -38,7 +39,6 @@ header {
 
     .Hamburger-menu {
         @include burger-line;
-        
         position: absolute;
         right: 10px;
         top: 10px;
@@ -47,7 +47,6 @@ header {
         &::before {
             @include burger-line;
             content: "";
-            
             position: absolute;
             top: 10px;
             z-index: 404;
@@ -59,8 +58,6 @@ header {
             top: 20px;
             z-index: 404;
         }
-
-
     }
 
     .Icon-and-title {
