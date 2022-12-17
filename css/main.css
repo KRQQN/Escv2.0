@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
 }
 
 .main {
@@ -23,7 +23,37 @@ header {
   max-width: 100%;
   padding-bottom: 20px;
   background-color: #011827;
-  color: #FFFFFF;
+  color: #ffffff;
+}
+header .Hamburger-menu {
+  background-color: #fff;
+  border-radius: 0.25em;
+  width: 2.5em;
+  height: 5px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 404;
+}
+header .Hamburger-menu::before {
+  background-color: #fff;
+  border-radius: 0.25em;
+  width: 2.5em;
+  height: 5px;
+  content: "";
+  position: absolute;
+  top: 10px;
+  z-index: 404;
+}
+header .Hamburger-menu::after {
+  background-color: #fff;
+  border-radius: 0.25em;
+  width: 2.5em;
+  height: 5px;
+  content: "";
+  position: absolute;
+  top: 20px;
+  z-index: 404;
 }
 header .Icon-and-title {
   display: flex;
@@ -44,15 +74,43 @@ header .Icon-and-title .Header-title {
   font-size: 24px;
   line-height: 28px;
 }
-header .Navbar > ul {
-  display: none;
-}
-header .Hamburger-menu {
-  max-width: 50px;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  padding: 10px;
+@media (max-width: 850px) {
+  header .Navbar {
+    display: none;
+  }
+  header .Navbar.open {
+    display: flex;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.5);
+    top: 0em;
+    right: 0em;
+    bottom: 0em;
+    left: 0em;
+  }
+  header .Navbar.open .nav-menu {
+    background-color: #011827;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style-type: none;
+    gap: 35px;
+    font-size: 2.2em;
+    font-weight: 700;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    bottom: 1em;
+    left: 1em;
+  }
+  header .Navbar.open .nav-menu a {
+    color: white;
+    text-decoration: none;
+  }
+  header .Navbar.open .nav-menu a:hover {
+    color: #8acfe5;
+    font-size: 2.4rem;
+  }
 }
 
 #Frontpage-picture {
@@ -75,7 +133,7 @@ section[name=Frontpage-picture-and-buttons] {
 
 .Challenges-btn {
   margin: auto;
-  background-color: #8ACFE5;
+  background-color: #8acfe5;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -105,7 +163,7 @@ section[name=Frontpage-picture-and-buttons] {
 }
 #Review-card-holder .Review-card {
   display: flex;
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
   min-width: 20rem;
   height: auto;
   margin-bottom: 15px;
@@ -165,8 +223,8 @@ section[name=Frontpage-picture-and-buttons] {
   height: 44px;
   border: none;
   border-radius: 4px;
-  background-color: #E3170A;
-  color: #FFFFFF;
+  background-color: #e3170a;
+  color: #ffffff;
 }
 
 .Story-preview {
@@ -174,7 +232,7 @@ section[name=Frontpage-picture-and-buttons] {
   flex-direction: column;
   width: 100%;
   background-color: #011827;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .Story-preview p {
   text-align: center;
@@ -182,8 +240,8 @@ section[name=Frontpage-picture-and-buttons] {
 }
 .Story-preview button {
   background-color: #011827;
-  color: #8ACFE5;
-  border: 2px solid #8ACFE5;
+  color: #8acfe5;
+  border: 2px solid #8acfe5;
   border-radius: 4px;
   align-self: center;
   min-width: 308px;
@@ -278,7 +336,7 @@ footer {
   flex-direction: column;
   background-color: #011827;
   padding: 20px 20px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 footer h4 {
   font-weight: 700;
@@ -289,7 +347,7 @@ footer h4 {
 }
 footer a {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
@@ -333,7 +391,7 @@ footer .Footer-list ul li :hover {
   }
   .Online-challenges-btn {
     margin: 0;
-    background-color: #E3170A;
+    background-color: #e3170a;
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -344,30 +402,31 @@ footer .Footer-list ul li :hover {
     min-width: 306px;
   }
   .Online-challenges-btn a {
-    color: #FFFFFF;
+    color: #ffffff;
     text-decoration: none;
   }
   .Challenges-btn {
     margin: 0;
   }
-  .Navbar .Hamburger-menu {
+  .Hamburger-menu {
     display: none;
   }
-  .Navbar ul {
+  .Navbar .nav-menu {
     padding-top: 25px;
     display: flex !important;
     justify-content: center;
     justify-content: space-around;
     list-style: none;
-    color: #FFFFFF;
+    color: #ffffff;
+    text-decoration: none;
+    z-index: 404;
+  }
+  .Navbar .nav-menu a {
+    color: #ffffff;
     text-decoration: none;
   }
-  .Navbar ul a {
-    color: #FFFFFF;
-    text-decoration: none;
-  }
-  .Navbar ul li > a:hover {
-    color: #8ACFE5;
+  .Navbar .nav-menu li > a:hover {
+    color: #8acfe5;
   }
   #Escaperooms-available {
     overflow: visible;

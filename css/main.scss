@@ -1,8 +1,7 @@
-$lightBlue: #8ACFE5;
-$background-color: #E5E5E5;
+$lightBlue: #8acfe5;
+$background-color: #e5e5e5;
 $darkBlue: #011827;
-$orangeIsh: #E3170A;
-
+$orangeIsh: #e3170a;
 
 * {
     padding: 0;
@@ -23,13 +22,46 @@ body {
     align-items: center;
     justify-content: center;
 }
+@mixin burger-line {
+    background-color: #fff;
+    border-radius:0.25em;
+    width: 2.5em;
+    height: 5px;
+}
 
 header {
     min-width: 360px;
     max-width: 100%;
     padding-bottom: 20px;
     background-color: $darkBlue;
-    color: #FFFFFF;
+    color: #ffffff;
+
+    .Hamburger-menu {
+        @include burger-line;
+        
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        z-index: 404;
+
+        &::before {
+            @include burger-line;
+            content: "";
+            
+            position: absolute;
+            top: 10px;
+            z-index: 404;
+        }
+        &::after {
+            @include burger-line;
+            content: "";
+            position: absolute;
+            top: 20px;
+            z-index: 404;
+        }
+
+
+    }
 
     .Icon-and-title {
         display: flex;
@@ -53,16 +85,49 @@ header {
         }
     }
 
-    .Navbar>ul {
-        display: none;
-    }
+    @media (max-width: 850px) {
+        .Navbar {
+            display: none;
 
-    .Hamburger-menu {
-        max-width: 50px;
-        position: absolute;
-        right: 10px;
-        top: 10px;
-        padding: 10px;
+            &.open {
+                display: flex;
+                position: fixed;
+                background-color: rgba(255, 255, 255, 0.5);
+                top: 0em;
+                right: 0em;
+                bottom: 0em;
+                left: 0em;
+
+                .nav-menu {
+                    background-color: $darkBlue;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    list-style-type: none;
+
+                    gap: 35px;
+                    font-size: 2.2em;
+                    font-weight: 700;
+
+                    position: absolute;
+                    top: 1em;
+                    right: 1em;
+                    bottom: 1em;
+                    left: 1em;
+
+                    a {
+                        color: white;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: $lightBlue;
+                            font-size: 2.4rem;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -105,7 +170,6 @@ section[name="Frontpage-picture-and-buttons"] {
     background: none;
     margin-bottom: 67px;
 }
-
 
 #Review-card-holder {
     width: 100%;
@@ -154,7 +218,7 @@ section[name="Frontpage-picture-and-buttons"] {
     display: flex;
     justify-content: space-between;
     overflow: scroll;
-    
+
     .Escape-rooms-booking {
         justify-content: space-between;
         width: 100%;
@@ -183,7 +247,7 @@ section[name="Frontpage-picture-and-buttons"] {
                 border: none;
                 border-radius: 4px;
                 background-color: $orangeIsh;
-                color: #FFFFFF;
+                color: #ffffff;
             }
         }
     }
@@ -194,7 +258,7 @@ section[name="Frontpage-picture-and-buttons"] {
     flex-direction: column;
     width: 100%;
     background-color: $darkBlue;
-    color: #FFFFFF;
+    color: #ffffff;
 
     p {
         text-align: center;
@@ -306,11 +370,11 @@ section[name="Frontpage-picture-and-buttons"] {
 }
 
 footer {
-    display:flex;
+    display: flex;
     flex-direction: column;
     background-color: $darkBlue;
     padding: 20px 20px;
-    color: #FFFFFF;
+    color: #ffffff;
 
     h4 {
         font-weight: 700;
@@ -319,30 +383,28 @@ footer {
         margin-top: 30px;
         margin-bottom: 10px;
     }
-   
+
     a {
         text-decoration: none;
-        color: #FFFFFF;
+        color: #ffffff;
         font-weight: 400;
         font-size: 18px;
         line-height: 21px;
     }
 
     .Footer-list {
-
         ul {
             list-style: none;
-            
+
             li :hover {
                 color: lightblue;
             }
         }
-    } 
+    }
 }
 
 @media only screen and (min-width: 850px) {
     .main {
-        
         section[name="Frontpage-picture-and-buttons"] {
             width: 100%;
             display: flex;
@@ -391,7 +453,7 @@ footer {
         min-width: 306px;
 
         a {
-            color: #FFFFFF;
+            color: #ffffff;
             text-decoration: none;
         }
     }
@@ -400,27 +462,27 @@ footer {
         margin: 0;
     }
 
+    .Hamburger-menu {
+        display: none;
+    }
+
     .Navbar {
-
-        .Hamburger-menu {
-            display: none;
-        }
-
-        ul {
+        .nav-menu {
             padding-top: 25px;
             display: flex !important;
             justify-content: center;
             justify-content: space-around;
             list-style: none;
-            color: #FFFFFF;
+            color: #ffffff;
             text-decoration: none;
+            z-index: 404;
 
             a {
-                color: #FFFFFF;
+                color: #ffffff;
                 text-decoration: none;
             }
 
-            li>a:hover {
+            li > a:hover {
                 color: $lightBlue;
             }
         }
@@ -502,13 +564,13 @@ footer {
 
     footer {
         width: 100%;
-        height: 467px ;
+        height: 467px;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
-        padding:0;
-        
+        padding: 0;
+
         h4 {
             font-weight: 700;
             margin-bottom: 10px;
@@ -518,8 +580,4 @@ footer {
             max-width: 420px;
         }
     }
-
-
-
-
 }
