@@ -58,6 +58,22 @@ header {
             top: 20px;
             z-index: 404;
         }
+        &.open {
+            top: 4em;
+            right: 3em;
+
+            transform: rotate(45deg);
+
+            &::before {
+                top:0;
+                transform: rotate(90deg);
+            }
+
+            &::after {
+                display:none;
+            }
+
+        }
     }
 
     .Icon-and-title {
@@ -82,9 +98,13 @@ header {
         }
     }
 
+    
+   
     @media (max-width: 850px) {
         .Navbar {
+
             display: none;
+            
 
             &.open {
                 display: flex;
@@ -95,7 +115,10 @@ header {
                 bottom: 0em;
                 left: 0em;
 
+            
                 .nav-menu {
+                    
+
                     background-color: $darkBlue;
                     display: flex;
                     justify-content: center;
@@ -106,6 +129,7 @@ header {
                     gap: 35px;
                     font-size: 2.2em;
                     font-weight: 700;
+
 
                     position: absolute;
                     top: 1em;

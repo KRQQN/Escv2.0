@@ -55,6 +55,18 @@ header .Hamburger-menu::after {
   top: 20px;
   z-index: 404;
 }
+header .Hamburger-menu.open {
+  top: 4em;
+  right: 3em;
+  transform: rotate(45deg);
+}
+header .Hamburger-menu.open::before {
+  top: 0;
+  transform: rotate(90deg);
+}
+header .Hamburger-menu.open::after {
+  display: none;
+}
 header .Icon-and-title {
   display: flex;
   justify-content: flex-start;
