@@ -58,6 +58,7 @@ header .Hamburger-menu::after {
 header .Hamburger-menu.open {
   top: 4em;
   right: 3em;
+  transition: top 1s, right 1s, transform 0.5s;
   transform: rotate(45deg);
 }
 header .Hamburger-menu.open::before {
@@ -66,6 +67,7 @@ header .Hamburger-menu.open::before {
 }
 header .Hamburger-menu.open::after {
   display: none;
+  transition: display 1s;
 }
 header .Icon-and-title {
   display: flex;
@@ -86,6 +88,42 @@ header .Icon-and-title .Header-title {
   font-size: 24px;
   line-height: 28px;
 }
+@-webkit-keyframes fadein {
+  from {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  to {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+@keyframes fadein {
+  from {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  to {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+@-webkit-keyframes burger-animation {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes burger-animation {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 @media (max-width: 850px) {
   header .Navbar {
     display: none;
@@ -93,13 +131,20 @@ header .Icon-and-title .Header-title {
   header .Navbar.open {
     display: flex;
     position: fixed;
-    background-color: rgba(255, 255, 255, 0.5);
     top: 0em;
     right: 0em;
     bottom: 0em;
     left: 0em;
+    -webkit-animation: fadein 1s;
+            animation: fadein 1s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
   }
   header .Navbar.open .nav-menu {
+    -webkit-animation: burger-animation 1s;
+            animation: burger-animation 1s;
+    -webkit-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;
     background-color: #011827;
     display: flex;
     justify-content: center;

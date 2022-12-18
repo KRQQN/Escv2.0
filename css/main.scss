@@ -43,6 +43,7 @@ header {
         right: 10px;
         top: 10px;
         z-index: 404;
+        
 
         &::before {
             @include burger-line;
@@ -57,10 +58,13 @@ header {
             position: absolute;
             top: 20px;
             z-index: 404;
+
+            
         }
         &.open {
             top: 4em;
             right: 3em;
+            transition: top 1s,right 1s, transform 0.5s;
 
             transform: rotate(45deg);
 
@@ -71,6 +75,7 @@ header {
 
             &::after {
                 display:none;
+                transition: display 1s;
             }
 
         }
@@ -98,26 +103,46 @@ header {
         }
     }
 
-    
-   
+    @keyframes fadein {
+        from { background-color: rgba(255, 255, 255, 0);
+        }
+
+        to { background-color: rgba(255, 255, 255, 0.5);
+        }
+        
+    }
+   @keyframes burger-animation {
+        0% {
+            opacity: 0;
+            transform: scale(0);
+        }
+        50% {
+            opacity: 1;
+            transform: scale(1);
+        }
+   }
     @media (max-width: 850px) {
         .Navbar {
 
             display: none;
             
+            
 
             &.open {
                 display: flex;
                 position: fixed;
-                background-color: rgba(255, 255, 255, 0.5);
+                //background-color: rgba(255, 255, 255, 0.5);
                 top: 0em;
                 right: 0em;
                 bottom: 0em;
                 left: 0em;
-
+                animation: fadein 1s;
+                animation-fill-mode: forwards;
             
                 .nav-menu {
                     
+                    animation: burger-animation 1s;
+                    animation-fill-mode: backwards;
 
                     background-color: $darkBlue;
                     display: flex;
