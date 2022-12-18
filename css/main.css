@@ -59,7 +59,7 @@ header .Hamburger-menu.open {
   top: 4em;
   right: 3em;
   transition: top 1s, right 1s, transform 0.5s;
-  transform: rotate(45deg);
+  transform: rotate(1035deg);
 }
 header .Hamburger-menu.open::before {
   top: 0;
